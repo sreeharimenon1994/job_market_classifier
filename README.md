@@ -12,14 +12,14 @@ The code provides the probability, count and similarity with the input job title
 Arguments:
 
 * `--title` default: "machine learning"
-* `--threshold` default: 0.5, Minimum similarity required.
-* `--top` default: 5, Number of top results to be show
+* `--threshold` default: 0.5, minimum similarity required
+* `--top` default: 5, number of top results to be show
 
 Scrapper:
 
     python scrapper.py
 
-It uses Selenium to scrape data with chrome driver. Chrome browser is necessary for it to work. The scrapper collects data from [indeed.com](https://www.indeed.co.uk/jobs?q=london&l=norwich) for different cities like london, glasgow, birmingham, manchester etc.
+The scrapper collects data from [indeed.com](https://www.indeed.co.uk/jobs?q=london&l=norwich) for different cities like london, glasgow, birmingham, manchester etc. It uses Selenium to scrape data with chrome driver. Chrome browser is necessary for it to work.
 
 ## Installation
 
