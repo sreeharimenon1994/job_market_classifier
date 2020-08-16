@@ -3,7 +3,7 @@ import pandas as pd
 import argparse
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--title', default='Machine Learning', help="Job title.")
+parser.add_argument('--title', default='machine learning', help="Job title.")
 parser.add_argument('--threshold', default=0.5, type=float, help="Minimum threshold for the similarity.")
 parser.add_argument('--top', default=5, type=int, help="Number of top results.")
 args = parser.parse_args()
@@ -18,7 +18,7 @@ def main(title, df, top):
 
     ratio = [(SequenceMatcher(None, title, x).ratio(), x) for x in tmp]
     ratio = sorted(ratio, key=ratio_filter, reverse=True)
-    print('\nTotal Jobs:', total, '\n')
+    print('\nTotal Jobs in dataset:', total, '\n')
     c = 0
     flag = True
     for x in ratio:
