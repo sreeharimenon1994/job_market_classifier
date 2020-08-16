@@ -13,7 +13,7 @@ Arguments:
 
 * `--title` default: "machine learning"
 * `--threshold` default: 0.5, minimum similarity required
-* `--top` default: 5, number of top results to be show
+* `--top` default: 5, number of top results to be shown
 
 Scrapper:
 
