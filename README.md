@@ -1,6 +1,7 @@
 # Market job Classifier
 
-This code pattern demonstrates how reinforcement can be used to train a system to play Lunar Lander game. The agent has to choose between fou action so as the spacecraft lands perfectly.
+The code demonstrates how to gather information regarding job market by providing the job title as the input.
+The code provides the probability, count and similarity with the input job title as the final output.
 
 ![output](/figures/output.png)
 
@@ -11,17 +12,18 @@ This code pattern demonstrates how reinforcement can be used to train a system t
 Arguments:
 
 * `--title` default: "machine learning"
-* `--threshold` default: 0.5
-* `--top` default: 5
+* `--threshold` default: 0.5, Minimum similarity required.
+* `--top` default: 5, Number of top results to be show
 
 Scrapper:
 
     python scrapper.py
 
-Collects data from indeed.com for different cities like london, glasgow, birmingham, manchester etc.
+It uses Selenium to scrape data with chrome driver. Chrome browser is necessary for it to work. The scrapper collects data from [indeed.com](https://www.indeed.co.uk/jobs?q=london&l=norwich) for different cities like london, glasgow, birmingham, manchester etc.
 
 ## Installation
 
 Pip:
 
     pip install -r requirements.txt
+
