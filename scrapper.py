@@ -3,10 +3,6 @@ from webdriver_manager.chrome import ChromeDriverManager
 import pandas as pd
 
 driver = webdriver.Chrome(ChromeDriverManager().install())
-# use for headless option
-# chrome_options.add_argument("--headless")
-# use it while using headless option
-# chrome_options.add_argument("--window-size=1920x1080")
 
 city = ["london", 'glasgow', 'birmingham', 'manchester',\
         'liverpool', 'oxford', 'cambridge', 'reading', 'bristol',\
@@ -14,7 +10,6 @@ city = ["london", 'glasgow', 'birmingham', 'manchester',\
 
 final_data = pd.DataFrame(columns=['title', 'company'])
 
-# driver = webdriver.Chrome(chrome_options=chrome_options, executable_path=driver_path)
 driver.maximize_window()
 for url in city:
     url = "https://www.indeed.co.uk/jobs?l="+url+"&q="
@@ -26,7 +21,6 @@ for url in city:
         for x in cards:
             title = x.find_element_by_class_name('jobtitle').get_attribute('title').lower()
             company = x.find_element_by_class_name('company').text.lower()
-            # print(title, company, '--')
             final_data = final_data.append({"title": title, "company": company}, ignore_index=True)
 
         xpath = '//*[@id="resultsCol"]/nav/div/ul/li/a[@aria-label="Next"]'
